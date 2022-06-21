@@ -115,14 +115,18 @@ box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
 border-radius: 10px;
 }
 
+.form__wrap{
+  margin-bottom: 15px;
+}
+
 .form__input{
   border: none;
   display: block;
   width: 100%;
   padding: 15px 15px 15px 32px;
-border: 1px solid #DEDEDE;
+border: 2px solid #DEDEDE;
 border-radius: 5px;
-margin-bottom: 20px;
+margin-bottom: 6px;
 outline: none;
 }
 
@@ -136,6 +140,21 @@ letter-spacing: 0.25px;
 color: #3D3B48;
 caret-color: red;
 }
+
+.form__span{
+  display:block;
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: right;
+  color: #FF7979;
+  margin-left: auto;
+  opacity: 0;
+}
+
+
 
 .form__button{
   font-family: 'Poppins';
@@ -166,3 +185,37 @@ color: #BAB7D4;
 .form__change{
   color: var(--red-color);
 }
+
+input:not(:placeholder-shown):not(:focus):valid{
+  border: 2px solid green;
+  background-image: url(../img/correc.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 25px center;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid{
+  border: 2px solid #FF7979;
+  background-image: url(../img/Group.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 25px center;
+}
+
+
+.form-name:not(:placeholder-shown):not(:focus):invalid ~ .form-name-span{
+  opacity: 1;
+}
+
+.form-last:not(:placeholder-shown):not(:focus):invalid ~ .form-last-span{
+  opacity: 1;
+}
+
+.form-email:not(:placeholder-shown):not(:focus):invalid ~ .form-email-span{
+  opacity: 1;
+}
+
+.form-password:not(:placeholder-shown):not(:focus):invalid ~ .form-password-span{
+  opacity: 1;
+}
+
