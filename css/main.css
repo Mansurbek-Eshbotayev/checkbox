@@ -172,6 +172,10 @@ margin-bottom: 8px;
 border: none;
 }
 
+.form__button:focus{
+  outline: none;
+}
+
 .form__text{
   font-family: 'Poppins';
 font-style: normal;
